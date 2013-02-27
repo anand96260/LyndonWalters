@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="SpryAssets/structure.css" rel="stylesheet" type="text/css" media="screen" />
+	<title>Lyndon Walters - SignIn</title>
+
+<script type="text/javascript">var switchTo5x=true;</script>
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "7ce22544-85ff-4b59-8fdf-f3eaec9705ee"});</script>
+
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js?v=2.0.6"></script>
+	<link rel="stylesheet" type="text/css" href="SpryAssets/jquery.fancybox.css?v=2.0.6" media="screen" />
+	<script type="text/javascript">
+
+<script>
+// This adds 'placeholder' to the items listed in the jQuery .support object. 
+jQuery(function() {
+   jQuery.support.placeholder = false;
+   test = document.createElement('input');
+   if('placeholder' in test) jQuery.support.placeholder = true;
+});
+// This adds placeholder support to browsers that wouldn't otherwise support it. 
+$(function() {
+   if(!$.support.placeholder) { 
+      var active = document.activeElement;
+      $(':text').focus(function () {
+         if ($(this).attr('placeholder') != '' && $(this).val() == $(this).attr('placeholder')) {
+            $(this).val('').removeClass('hasPlaceholder');
+         }
+      }).blur(function () {
+         if ($(this).attr('placeholder') != '' && ($(this).val() == '' || $(this).val() == $(this).attr('placeholder'))) {
+            $(this).val($(this).attr('placeholder')).addClass('hasPlaceholder');
+         }
+      });
+      $(':text').blur();
+      $(active).focus();
+      $('form:eq(0)').submit(function () {
+         $(':text.hasPlaceholder').val('');
+      });
+   }
+});
+
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+
+
+</head>
+<body>
+<div class="wrapper">
+<div id="header">
+      <div id="headercon">
+    <div id="img001"><img src="img/header-image001.jpg" alt="Finding the treasure in you" /></div>
+    <div id="img002"><img src="img/header-image002.jpg" alt="Coaching for a living" /></div>
+    <div id="logo"> <img src="img/lydon-walters-logo.jpg" alt="Lyndon Walters Logo" />
+          <div id="headergraphic"></div>
+        </div>
+  </div>
+    </div>
+<div id="nav">
+  <div id="navcon">
+    <div id="navleft" style="width:400px; height:auto; float:left;">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="what-i-provide.html">What i provide</a></li>
+        <li><a href="philosophies.html">philosophies</a></li>
+         <li><a href="payment.html">Payment</a></li>
+        
+        
+      </ul>
+    </div>
+    <div id="navright" style="width:420px; height:auto; float:right; ">
+      <ul style="float:right">
+      <li><a href="research.html">Research</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="membership.html">Memberships</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        
+
+
+<div id="bodyouter">
+      <div id="bodycon">
+
+<div id="inner">
+	<h1>Member Sign In</h1>
+
+  <div id="pleftcol">
+   	<h2>Please sign in below with your details</h2>
+      <p> Once you are logged in you will have access to the payment options page and 'Purchaser Voucher'
+System ©  </p>
+      
+      <fieldset>
+      <form action="signin.php" autocomplete="no">
+      	<input type="text" class="topfields required" placeholder="Email" />
+        <input type="text" class="topfields required onlydigits" placeholder="Password" /><br />
+		</form>
+      </fieldset>
+      
+      
+      
+    
+    
+    <button class="search" style="margin-left:2px; margin-top:30px; width:330px">Sign In</button>
+    
+    
+      
+      
+  </div>
+  <div id="listright" style="width:380px; margin-top:30px; float:right;">
+                  <h2 style="font-size:16px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#666666; margin-bottom:10px;">Advantages</h2>
+                  
+                  
+              
+                  <ul style="width:380px;">
+                <li> Free Membership Worth £150 per annum</li>
+                <li><span style="font-weight:bold; text-decoration:underline;">Free</span> Monthly Newsletter </li>
+                <li>Immediate <span style="font-weight:bold; text-decoration:underline;">10% reduction</span> in cost for 'One-with-One' Personal Session for individual member </li>
+                <li>Periodic <span style="font-weight:bold; text-decoration:underline;">20% reduction</span> in cost for ‘Packaged’ ‘One-with-One’ Personal Sessions* (N.B. time sensitive notifications, applications and bookings apply)</li>
+                <li>Access to the <span style="font-weight:bold; text-decoration:underline;">Benefits of 'Purchaser Voucher'<br />
+System ©</span></li>
+                <li>Ability to purchase 'Gift' for <span style="font-weight:bold; text-decoration:underline;">Beneficiary with Purchaser Voucher System ©**</span></li>
+                <li>Access to <span style="font-weight:bold; text-decoration:underline;">‘Preferred Notification’</span> for 'Early Bird' and 'Specials' for Group Events (e.g. Workshops)</li>
+                <li>Possibility of <span style="font-weight:bold; text-decoration:underline;">'Free' e-book</span>
+                </li>
+                </ul>
+                <br />
+                 <p>*Terms &amp; Conditions apply. </p>
+               <p>&nbsp;</p>
+    </div>
+</div>
+</div>
+
+	  
+      
+<div id="footer">
+  <div id="footercon">
+   	<div id="foottext">You are capable of experiencing not only achievement but fulfilment also.<br /><img src="img/footer-divider.gif" style="margin-top:10px;" alt=""  /><br />
+    Be inspired!</div>
+	
+
+    <div id="footnav"><a href="#">Home</a> |   <a href="what-i-provide.html">What I provide</a> |  <a href="philosophies.html">Philosophies</a> |  <a href="payment.html">Payment</a> |  <a href="research.html">Research</a> |  <a href="testimonials.html">Testimonials</a> |  <a href="membership.html">Membership</a> |  <a href="contact.html">Contact</a> 
+      <p style="margin-top:5px;">Copyright © 2012 Finding The Treasure In You.     All Rights Reserved. </p>
+<p style="margin-top:25px;">Share your discovery on:
+<span class='st_sharethis_hcount' displayText='ShareThis'></span>
+<span class='st_facebook_hcount' displayText='Facebook'></span>
+<span class='st_twitter_hcount' displayText='Tweet'></span>
+<span class='st_linkedin_hcount' displayText='LinkedIn'></span>
+<span class='st_pinterest_hcount' displayText='Pinterest'></span>
+<span class='st_email_hcount' displayText='Email'></span>
+</div>
+    </div></div></body></html>

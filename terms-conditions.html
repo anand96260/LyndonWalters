@@ -1,0 +1,568 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link href="SpryAssets/structure.css" rel="stylesheet" type="text/css" media="screen" />
+	<title>Lyndon Walters - Terms &amp; Conditions</title>
+	<script type="text/javascript">var switchTo5x=true;</script>
+	<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+	<script type="text/javascript">stLight.options({publisher: "e51f4a10-524e-4cf2-8ecb-86405c2a2ca5"}); </script>
+	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fancybox.js?v=2.0.6"></script>
+	<link rel="stylesheet" type="text/css" href="SpryAssets/jquery.fancybox.css?v=2.0.6" media="screen" />
+	<script type="text/javascript">
+		$(document).ready(function() {
+			/*
+			 *  Simple image gallery. Uses default settings
+			 */
+
+			$('.fancybox').fancybox();
+
+			/*
+			 *  Different effects
+			 */
+
+			// Change title type, overlay opening speed and opacity
+			$(".fancybox-effects-a").fancybox({
+				helpers: {
+					title : {
+						type : 'outside'
+					},
+					overlay : {
+						speedIn : 500,
+						opacity : 0.95
+					}
+				}
+			});
+
+			// Disable opening and closing animations, change title type
+			$(".fancybox-effects-b").fancybox({
+				openEffect  : 'none',
+				closeEffect	: 'none',
+
+				helpers : {
+					title : {
+						type : 'over'
+					}
+				}
+			});
+
+			// Set custom style, close if clicked, change title type and overlay color
+			$(".fancybox-effects-c").fancybox({
+				wrapCSS    : 'fancybox-custom',
+				closeClick : true,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					overlay : {
+						css : {
+							'background-color' : '#eee'
+						}
+					}
+				}
+			});
+
+			// Remove padding, set opening and closing animations, close if clicked and disable overlay
+			$(".fancybox-effects-d").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					overlay : null
+				}
+			});
+
+			/*
+			 *  Button helper. Disable animations, hide close button, change title type and content
+			 */
+
+			$('.fancybox-buttons').fancybox({
+				openEffect  : 'none',
+				closeEffect : 'none',
+
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+
+				helpers : {
+					title : {
+						type : 'inside'
+					},
+					buttons	: {}
+				},
+
+				afterLoad : function() {
+					this.title = 'Image ' + (this.index + 1) + ' of ' + this.group.length + (this.title ? ' - ' + this.title : '');
+				}
+			});
+
+
+			/*
+			 *  Thumbnail helper. Disable animations, hide close button, arrows and slide to next gallery item if clicked
+			 */
+
+			$('.fancybox-thumbs').fancybox({
+				prevEffect : 'none',
+				nextEffect : 'none',
+
+				closeBtn  : false,
+				arrows    : false,
+				nextClick : true,
+
+				helpers : {
+					thumbs : {
+						width  : 50,
+						height : 50
+					}
+				}
+			});
+
+			/*
+			 *  Media helper. Group items, disable animations, hide arrows, enable media and button helpers.
+			*/
+			$('.fancybox-media')
+				.attr('rel', 'media-gallery')
+				.fancybox({
+					openEffect : 'none',
+					closeEffect : 'none',
+					prevEffect : 'none',
+					nextEffect : 'none',
+
+					arrows : false,
+					helpers : {
+						media : {},
+						buttons : {}
+					}
+				});
+
+			/*
+			 *  Open manually
+			 */
+
+			$("#fancybox-manual-a").click(function() {
+				$.fancybox.open('1_b.jpg');
+			});
+
+			$("#fancybox-manual-b").click(function() {
+				$.fancybox.open({
+					href : 'iframe.html',
+					type : 'iframe',
+					padding : 5
+				});
+			});
+
+			$("#fancybox-manual-c").click(function() {
+				$.fancybox.open([
+					{
+						href : '1_b.jpg',
+						title : 'My title'
+					}, {
+						href : '2_b.jpg',
+						title : '2nd title'
+					}, {
+						href : '3_b.jpg'
+					}
+				], {
+					helpers : {
+						thumbs : {
+							width: 75,
+							height: 50
+						}
+					}
+				});
+			});
+
+
+		});
+	</script>
+	</head>
+
+	<body>
+<div class="wrapper">
+<div id="header">
+      <div id="headercon">
+    <div id="img001"><img src="img/header-image001.jpg" alt="Finding the treasure in you" /></div>
+    <div id="img002"><img src="img/header-image002.jpg" alt="Coaching for a living" /></div>
+    <div id="logo"> <img src="img/lydon-walters-logo.jpg" alt="Lyndon Walters Logo" />
+          <div id="headergraphic"></div>
+        </div>
+  </div>
+    </div>
+<div id="nav">
+  <div id="navcon">
+    <div id="navleft" style="width:400px; height:auto; float:left;">
+      <ul>
+        <li><a href="home.php">Home</a></li>
+        <li><a href="what-i-provide.html">What i provide</a></li>
+        <li><a href="philosophies.html">philosophies</a></li>
+         <li><a href="payment.html">Payment</a></li>
+        
+        
+      </ul>
+    </div>
+    <div id="navright" style="width:420px; height:auto; float:right; ">
+      <ul style="float:right">
+      <li><a href="research.html">Research</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="membership.html">Memberships</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+        
+
+
+<div id="bodyouter">
+      <div id="bodycon">
+    <div id="leftcol" style="width:100%">
+          <div class="post">
+        <h2>Terms &amp; Conditions</h2>
+        <div class="subtext"></div>
+        <div id="innerblog">
+              <div id="leftcol2">
+              
+              
+              <div id="listleft" style="width:100%; float:left; margin-top:0px;">
+                  <h2>All items of these Terms and Conditions are applied without prejudice.</h2>
+
+
+                
+             
+                  <ol start="1" type="1" style="margin-top:20px; list-style:decimal">
+                    
+                    <li>All clients are aware that they are      free to choose whether to become a <strong><em>member</em></strong> or to remain as a <strong><em>non-member</em></strong>.</li>
+                  </ol>
+                  <ol start="2" type="1" >
+                    <li>All clients are aware that once      payment has been made as a <strong><em>non-member</em></strong> and the Session has      been completed no claim or discrepancy is encouraged or entertained with      regard to the reduction in cost afforded to <strong><em>members</em></strong>.                  </li>
+                </ol>
+                  <ol start="3" type="1">
+                    <li>All minimum or maximum reduction in      cost to members is initiated as a significant <em>promotional reward</em> but remain at the sole discretion of the      Coach/Practitioner, Lyndon Walters only.</li>
+                  </ol>
+                  <ol start="4" type="1">
+                    <li>All other periodic reductions, like <strong>&lsquo;Specials&rsquo;</strong> or <strong>&lsquo;Early Bird&rsquo;</strong>, are promotional in context but <strong><em>&lsquo;Time-Sensitive&rsquo;</em></strong> also. Members are at liberty to choose whether to take advantage within      the given time-frame set out as appropriately defined.                  </li>
+                  </ol>
+                  <ol start="5" type="1">
+                    <li>All Clients must accept and agree to      give appropriate details required when booking Sessions for self or on      behalf of another individual.</li>
+                  </ol>
+                  <ol start="6" type="1">
+                    <li>All Clients must accept and agree that      &lsquo;Payment Options&rsquo; are available to both <strong><em>members </em></strong>and <strong><em>non-members</em></strong>.                  </li>
+                  </ol>
+                  <ol start="7" type="1">
+                    <li>All Clients must accept and agree that      &lsquo;Purchaser Voucher&rsquo;© <em><u>can be used by members only.</u></em></li>
+                  </ol>
+                  <ol start="8" type="1">
+                    <li>All Clients must accept and agree that      &lsquo;Purchaser      Voucher&rsquo; © is not a physical voucher.                  </li>
+                  </ol>
+                  <ol start="9" type="1">
+                    <li>All Clients must accept and agree that      &lsquo;Purchaser      Voucher&rsquo; © is &lsquo;Virtual Voucher&rsquo;; affording individuals an optional      preference to pay.</li>
+                  </ol>
+                  <ol start="10" type="1">
+                    <li>All Clients must be aware that &lsquo;Purchaser Voucher&rsquo; ©      allows total amount for <strong><em>Personal Session</em></strong> can be split      into <strong><em>two separate payments</em></strong> <em><u>prior      to agreed date of Personal Session</u></em>.                  </li>
+                  </ol>
+                  <ol start="11" type="1">
+                    <li>All Clients must be aware that &lsquo;Purchaser Voucher&rsquo; ©      allows total amount for &lsquo;Individual Session&rsquo; <strong><em>as</em></strong> <strong><em>&lsquo;gift&rsquo;</em></strong> to Beneficiary to be split into <strong><em>two separate payments</em></strong> <em><u>prior to agreed date of Personal      Session</u></em>.</li>
+                  </ol>
+                  <ol start="12" type="1">
+                    <li>All Clients must be aware that &lsquo;Purchaser Voucher&rsquo; ©      allows total amount for &lsquo;Individual Session&rsquo; <strong><em>as &lsquo;gift&rsquo;</em></strong> to      Beneficiary, to be made in <strong><em>one payment</em></strong> <em><u>prior to agreed date of Personal      Session</u></em>.                  </li>
+                  </ol>
+                  <ol start="13" type="1">
+                    <li>All Clients must accept and agree that      all Singular      Sessions <strong><em><u>must be paid in full up to 5 days before date of Event</u></em></strong>.      These include payments made by &lsquo;Purchaser Voucher&rsquo; System © where      applicable.</li>
+                  </ol>
+                  <ol start="14" type="1">
+                    <li>All Clients must accept and agree that      Group Events      (i.e. Workshops, Seminars and Inspirational Speaking)<strong><em><u> must be paid in full up      to 5 days before date of Event</u></em></strong>.                  </li>
+                  </ol>
+                  <ol start="15" type="1">
+                    <li>All Clients must accept and be aware      that &lsquo;Purchaser      Voucher © <strong><em><u>does not apply to &lsquo;Specials&rsquo; nor &lsquo;Early Bird&rsquo; Prices</u></em> at      any time</strong>.</li>
+                  </ol>
+                <ol start="16" type="1">
+                    <li>&lsquo;Purchaser Voucher © <em>does not apply to &lsquo;Corporate&rsquo; whether      it is a singular &lsquo;Group Event&rsquo; or a series of &lsquo;Group Events&rsquo; arranged for      or on behalf of the Organisation</em> at any time notwithstanding their      intentions.</li>
+                </ol>
+                <ol start="17" type="1">
+                    <li>All Clients must be aware and agree to      supply <em>details of purchaser      (Subscriber) and of proposed client (Beneficiary)</em>. These must be submitted      when making two-part payments <strong><em>as &lsquo;gift&rsquo;</em></strong> as indicated or      implied by &lsquo;Duo&rsquo; 1 – Type (A) or &lsquo;Duo&rsquo; 2 – Type (C).</li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="18" type="1">
+                    <li>All Clients must be aware and agree to      supply <em>details as required.</em> These must be submitted      when making regular singular payment. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="19" type="1">
+                    <li>All Clients must be aware and agree to      supply <em>details as required.</em> These must be submitted      when making two-part payments via &lsquo;Uno&rsquo; Purchaser Voucher © - Type (B) </li>
+                  </ol>
+                <ol start="20" type="1">
+                    <li>All Clients must accept and agree that <u>n</u><em><u>either, the Coach, Lyndon      Walters nor www.lyndonwalters.com, is responsible for any errors</u></em> whether intentionally or      unintentionally which brings discrepancy in payment made through two-part      payment for Personal Sessions or other Events.</li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="21" type="1">
+                    <li><em><u>All clients need to be aware, understand and  agree to the Terms and Conditions under which they have entered into any  Contract with the Coach, Lyndon Walters</u> </em>and <a href="http://www.lyndonwalters.com/">www.lyndonwalters.com</a>. The Contract  binds each individual using the Service to the Terms and Conditions of the  particular Contract whether as non-members or members.</li>
+                  </ol>
+              <ol start="22" type="1">
+                    <li><em><u>All clients need to be aware, understand and  agree to the Terms and Conditions of membership</u></em> once accepted as such by the Coach, Lyndon Walters  and <a href="http://www.lyndonwalters.com/">www.lyndonwalters.com</a>. The  Contract binds each individual using the Service to the Terms and Conditions of  the particular Contract as members.</li>
+                  </ol>
+                <p>&nbsp;</p>
+                <ol start="23" type="1">
+                    <li><em><u>All clients need to be aware, understand and  agree to the Terms and Conditions under which they have entered into a  Contract, herein called the Purchaser Voucher System ©<strong>,</strong></u></em> whereby clients choose to become members in order to enable them to choose to  take advantage of that System in order to gain ‘preferred advantages’ over and  above non-members.</li>
+                  </ol>
+              <ol start="24" type="1">
+                    <li>. All clients need to  be aware, understand and agree to the Terms and Conditions under which they  have entered into a Contract, hereby called ‘Purchaser Voucher System’ ©. <em><u>This holds each client liable to complete  payments within ‘Time-Sensitive’ period stated here. In the case of ‘Uno’, Type  (B), all payment must be completed within one calendar month. In the case of  ‘Duo’ 1 Type (A), ‘Virtual Gift’ and ‘Duo’ 2, Type (C), ‘Virtual Gift’; both  being two-part payments, must be completed within 3 calendar months</u></em>.</li>
+                  </ol>
+                <p>&nbsp;</p>
+                <ol start="25" type="1">
+                    <li><em><u>All clients need to be aware and agree that they  understand all Purchaser Vouchers, ‘Uno’ Type (B), ‘Duo’ 1 Type (A) and ‘Duo’ 2  Type (C),</u></em><u> <em>to be deemed as initiated from the date of initial payment and  inclusive as from that date for the ‘Time-Sensitive’ period agreed by Contract</em>,</u> both verbally and under these Terms and  Conditions.</li>
+                  </ol>
+              <ol start="26" type="1">
+                    <li>All Clients must agree to declare any      medical/mental history at the time of booking a Session for self or third      party; notwithstanding the use of Purchaser <br />
+                      Voucher © option. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="27" type="1">
+                    <li>All Clients must agree to list most      recent illness first then progress others in appropriate order. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="28" type="1">
+                    <li>All Clients must accept and agree to      complete and return &lsquo;Resourceful Questionnaires&rsquo;, &lsquo;Issues&rsquo; List,      &lsquo;Emotional Sensitivity Assessments&rsquo;, or any other &lsquo;Tools&rsquo; deemed and      agreed as appropriate by client and Coach/Practitioner up to 5 days prior      to any booked Session. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="29" type="1">
+                    <li>All Clients must agree to arrive in      time for agreed start of Session. </li>
+                  </ol>
+                <ol start="30" type="1">
+                    <li>All Clients must agree to accept      responsibility for any lateness of arrival for an agreed booked Session,      irrespective of reason for individual&rsquo;s late arrival. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="31" type="1">
+                    <li>All Clients must agree and accept that,      because of individual late arrival, only that portion of time remaining      can apply to the particular Session. </li>
+                  </ol>
+                <ol start="32" type="1">
+                    <li>All Clients must agree that the      Coach/Practitioner is not an element in any way for individual&rsquo;s late      arrival. </li>
+                </ol>
+                <ol start="33" type="1">
+                    <li>All Clients must agree to accept that      individual <strong><em>late arrival cannot be converted into cancellation of that      particular Session.</em></strong></li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="34" type="1">
+                    <li>All Clients must agree, accept and      further understand that <strong><em><u>no refund <br />
+                      can be or is expected from the Coach/Practitioner</u></em></strong>,      &lsquo;findingthetreasureinyou.co.uk&rsquo; or &lsquo;www.lyndonwalters.com&rsquo;. </li>
+                  </ol>
+                <ol start="35" type="1">
+                    <li>All Clients must accept and agree that <strong><em>cancellation      is acceptable</em></strong> providing it is agreed with the Coach/Practitioner <strong><em><u>up      to 5 days prior to the date of the appointment</u></em></strong>. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="36" type="1">
+                    <li>All Clients must be aware that agreed      cancellation given up to 5 days prior to the date of appointments <strong><em><u>can      be re-booked</u></em></strong> to a further date convenient to both the      Coach/Practitioner and the Client. </li>
+                  </ol>
+                <ol start="37" type="1">
+                    <li>All Clients must accept and agree that <strong><em><u>any      refund due to cancellation is at the total discretion of the      Coach/Practitioner.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="38" type="1">
+                    <li>All Clients must accept and agree that      any refund due to cancellation is the amount paid by client less any fees      incurred by third party, Paypal. </li>
+                  </ol>
+                <ol start="39" type="1">
+                    <li>All Clients must accept and agree that      neither Lyndon Walters nor www.lyndonwalters.com is responsible nor have      control over cost incurred from third party, Paypal.<br />
+                    </li>
+                    <li>All Clients must accept and agree that <strong><em><u>cancellation      given 4 days prior to the date of a booked appointment do incur a cost of      15% of the original amount paid for Individual Session or Group Event.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="41" type="1">
+                    <li>All Clients must accept and agree that <strong><em><u>cancellation      given 3 days prior to the date of a booked appointment do incur a cost of      25% of the original amount paid for Individual Session or Group Event.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                <ol start="42" type="1">
+                    <li>All Clients must accept and agree that <strong><em><u>cancellation      given 2 days prior to the date of a booked appointment do incur a cost of      50% of the original amount paid for Individual Session or Group Event.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="43" type="1">
+                    <li>All Clients must accept and agree that <strong><em><u>cancellation      given 1 day prior to the date of a booked appointment do incur a cost of      75% of the original amount paid for Individual Session or Group Event.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                <ol start="44" type="1">
+                    <li>All Clients must accept and agree that <strong><em><u>cancellation      given on the day of booked appointment do incur a cost of 100% of the      original amount paid for Individual Session or Group Event.</u></em></strong><strong><em><u> </u></em></strong></li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="45" type="1">
+                    <li>All Clients must accept and agree to      understand that the Coach/Practitioner, Lyndon Walters is not a &lsquo;Life&rsquo;      Coach. </li>
+                  </ol>
+                <ol start="46" type="1">
+                    <li>All Clients must be aware, accept and      agree that the Coach/Practitioner, Lyndon Walters engages in philosophical      and psychological principles, concepts and contexts. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="47" type="1">
+                    <li>All Clients must agree to accept the      Conceptual, Contextual and Experiential elements as the integral      components and philosophies that drive the <br />
+                      Coach/Practitioner, Lyndon Walters and www.lyndonwalters.com. </li>
+                  </ol>
+                <ol start="48" type="1">
+                    <li>All Clients must agree to accept the      Conceptual, Contextual and Experiential elements are the integral      components and philosophies that is put into practice at each Session,      Workshops, Seminars and Inspirational Speaking. </li>
+                </ol>
+                <ol start="49" type="1">
+                    <li>All Clients agree to accept the      concept of &lsquo;Self-Discovery&rsquo; as the core awareness pathway/trail of all      Sessions, Workshops, Seminars and Inspirational Speaking. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="50" type="1">
+                    <li>All Clients must agree to accept that      all booked Sessions are of one hour duration only. </li>
+                  </ol>
+                <ol start="51" type="1">
+                    <li>All Clients must agree to accept that      the Coach/Practitioner <strong><em><u>can neither offer nor recommend any      form of medication at any time before, during or after Sessions, <br />
+                      Seminars, Workshops or Inspirational Speaking. <br />
+                    </u></em></strong></li>
+                    <li>All Clients must agree to accept that to      understand that Lyndon Walters has devised a method of Coaching that      enables clients to be empowered in order for them to accelerate their learning. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="53" type="1">
+                    <li>All Clients must accept and agree to      understand that Lyndon Walters&rsquo; purpose is to enable individuals to have      &lsquo;meaningful experiences&rsquo; through self-discovery. </li>
+                  </ol>
+                <ol start="54" type="1">
+                    <li>All Clients must agree and accept that      the Coach/Practitioner does not give advice, opinions or suggestions. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="55" type="1">
+                    <li>All Clients must agree to accept that      the Coach/Practitioner is not responsible for any change or progress      individuals might choose to make. </li>
+                  </ol>
+                <ol start="56" type="1">
+                    <li>All Clients must accept that the      Coach/Practitioner is not responsible for individual negative mindset or      any lack of progress by individuals who choose not to take action for      making a change in individual situations or environments. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="57" type="1">
+                    <li>All Clients must agree to accept personal      responsibility for deciding when progress begins. </li>
+                  </ol>
+                <ol start="58" type="1">
+                    <li>All Clients must agree to accept the      Coach/Practitioner acts as a Guide only. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="59" type="1">
+                    <li>All Clients are asked to update      Coach/Practitioner of current progress via phone, email or by post      (address as listed on the website). </li>
+                  </ol>
+                <ol start="60" type="1">
+                    <li>All Clients must agree to give      permission for Testimonials to be selected and used to help with      Marketing. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="61" type="1">
+                    <li>All Clients agree to follow through      with agreed tasks including tasks set and agreed to be done at and away      from Sessions; providing they are deemed and agreed as reasonable by both      Coach/Practitioner and Client. </li>
+                  </ol>
+                <ol start="62" type="1">
+                    <li>All Clients must agree to enable and      maintain &lsquo;good practice&rsquo; as a minimum standard when visiting Venues booked      for Sessions, Workshops, Seminars and <br />
+                      Inspirational Speaking. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="63" type="1">
+                    <li>All Clients must agree to arrive at      Venues for Sessions, Workshops, Seminars and Inspirational Speaking free      from the influence of illegal substances, (e.g. Drugs, including Alcohol). </li>
+                  </ol>
+                <ol start="64" type="1">
+                    <li>All Clients must agree to accept that      no drugs except for legally prescribed medication needed for individual      use just before, during or after the booked Session can be carried into      the Venue where Session is being held. </li>
+                  </ol>
+                <ol start="65" type="1">
+                    <li>All Clients must agree to provide      stable and fully secured Venues whenever Coach/Practitioner is invited to      visit those Venues booked for delivering Sessions, <br />
+                      Workshops, Seminars and Inspirational Speaking </li>
+                </ol>
+                <ol start="66" type="1">
+                    <li>All Clients must agree to accept that      Sessions are tailored to each individual and are therefore deemed as Intuitive      explorations only. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="67" type="1">
+                    <li>All Clients must agree to accept that      &lsquo;Tools&rsquo; used during Sessions are intended for the benefit of the Client      only. </li>
+                  </ol>
+                <ol start="68" type="1">
+                    <li>All Clients must agree to accept that      individuals determine which of the &lsquo;Tools&rsquo; is preferred as suitable for      their particular need. </li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="69" type="1">
+                    <li>All Clients must agree to accept that      all Sessions are subject to cessation from disturbances deemed as disruptive      or such distractions which detracts from the <br />
+                      intention of a high quality Session. </li>
+                  </ol>
+                <ol start="70" type="1">
+                    <li>All Clients must agree to accept that      some examples of disturbing elements that might detract from the intended      high quality Session are mobile phones, M.P.3s, <br />
+                      chewing gum, family members, colleagues or friends etc or any other form      of nuisance that might be deemed as interruption by the      Coach/Practitioner.</li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="71" type="1">
+                    <li>All possible Prospects must accept to      agree that it is the sole decision of Lyndon Walters whether he chooses      any individual as a client; notwithstanding his right to make that decision.</li>
+                  </ol>
+                <ol start="72" type="1">
+                    <li>All Clients must agree to accept that      Intuition is the only &lsquo;Source&rsquo; by which Lyndon Walters operates. It      remains a natural resource that guides him when making decisions about      choosing clients too.</li>
+                  </ol>
+                  <p>&nbsp;</p>
+                <ol start="73" type="1">
+                    <li>&lsquo;Time sensitive&rsquo; announcements mean      that bookings and payments made by clients need to be executed within the      stated inclusive promotional time period in order to validate the booking.</li>
+                  </ol>
+                <ol start="74" type="1">
+                    <li>All Clients must agree to accept that &lsquo;Concessions      Rates&rsquo; are made available without prejudice but must meet with authentic      approval by the relevant authorities.</li>
+                  </ol>
+                  <p><u>&nbsp;</u></p>
+                <ol start="75" type="1">
+                    <li>All Clients must agree to accept that      it is incumbent upon each individual applying for &lsquo;Concession Rates&rsquo; to      supply the Coach/Practitioner, Lyndon Walters and <a href="http://www.lyndonwalters.com/">www.lyndonwalters.com</a> with      relevant authentic authoritative proof as required by law.<u></u></li>
+                  </ol>
+                <ol start="76" type="1">
+                    <li>All Clients must agree to accept <strong><em><u>that      failure to gain authentic approval from the relevant authorities</u></em></strong><u> <strong><em>render      the applications &nbsp;for      &lsquo;ConcessionsRates&rsquo; &lsquo;Null&rsquo; and &lsquo;Void&rsquo; but without prejudice.</em></strong></u> </li>
+                    <li>
+                      <p><em><u>All clients need to be aware, understand  and agree to the Terms and Conditions of the Contract when choosing to make  applications for ‘Concession Rates’</u></em>.</p>
+                    </li>
+                    <li>
+                      <p><em><u>All clients need to be aware, understand  and agree that all decisions concerning Concession applications and rates are  final.</u></em></p>
+                    </li>
+                    <li>
+                      <p><em><u>All clients need to be aware, understand and  agree that all Concession Application must have ‘Proof’ established by the  relevant Authority to be deemed as genuine</u></em>.</p>
+                    </li>
+                    <li>
+                      <p><em><u>All clients need to be aware, understand and  agree that all applications not satisfactorily proven by the relevant Authority  may be deemed as not being genuine but renders that application as VOID.</u></em></p>
+                    </li>
+                    <li><em><u>All clients need to be aware, understand and  agree that all payments at Concession Rates must be completed within 5 weeks  from date of confirmation with the Coach, Lyndon Walters</u></em> and <a href="http://www.lyndonwalters.com/">www.lyndonwalters.com</a>.</li>
+                    <li>
+                      <p><em><u>All clients need to be aware, understand and  agree that they need to be confirmed members in order to enable individual  clients to access consideration for ‘Concession Rates’</u></em>.</p>
+                    </li>
+                    <li><em><u>All clients need to be aware, understand and  agree that by choosing to apply for</u></em> <em><u>‘Concession  Rates’ nullifies</u></em><u> <em>any other  Membership ‘Advantages’ and ‘Time –Sensitive’ Benefits<strong>.</strong></em></u></li>
+                    <li><em><u>All clients need to be aware, understand and  agree that all ‘ refunds’ when approved is the original  amount less any amount paid to Paypal for the  original transaction.</u></em></li>
+                    <li><em>Time sensitive notification means for members to  confirm booking and make payment within the specified time period announced  and/or agreed. All 'Bookings' are via this website. All 'Payments' are to be  made via Paypal 'in time' as stated</em>.</li>
+                    <li>
+                      <p><em>'Gift' payment for Beneficiary means  for members to choose the specific ‘Purchaser Voucher System’ <strong>©</strong> . &nbsp;All 'Bookings' are to be made via this website. All 'Payments' are to  be made via Paypal 'in time' as stated</em>. </p>
+                    <u></u></li>
+                </ol>
+<p style="font-weight:bold">&nbsp;</p>
+
+
+ <h2>Disclaimer</h2>
+ <p>&nbsp;</p>
+ <h2>Please read below</h2>
+ <p><strong>Important note:</strong></p>
+ <p>While the philosophy and psychology behind Mind/Body Science (e.g. Neuro-Linguistic Programming commonly called &lsquo;Talk Therapy&rsquo;), the suggestibility of Hypnosis, the energy status behind Reiki and the remarkable potential for individuals to access and utilize the principle of the Placebo Effect, the core factor to any degree of progress or not must rest solely with any action/non-action taken by those individuals. Use of their capabilities to glean new learning in order for them to make individual progress is a matter of preference by those individuals. Their internal dialogues and undiluted belief systems are often considered by individuals as leading to &lsquo;Knowingness&rsquo;, possibly! Individuals must make decisions whether they are internally driven to make such changes as is required in order to access significant individual clarity through &lsquo;Self Discovery&rsquo;. <br />
+   <br />
+   It is the responsibility of each individual to become more aware of self and with the advent of a new Mindset but looking from a new set of perspectives. It is likely that any singular discipline or permutations of the above disciplines might or might not be deemed by individuals as being causative to produce remarkable clinical results. Even though testimonials from individuals, who are best positioned to comment, confirm the efficacy or otherwise of the practice of using such principles or affiliated &lsquo;tools&rsquo; to elicit bona fide results, it must still be considered to be in the experimental stage. Thus all Clients must take complete responsibility for their use of Mind/Body Science when interacting with Lyndon Walters as a Relationship, Development and Performance Coach/Practitioner, findingthetreasureinyou.co.uk or LyndonWalters.com. </p>
+ <p><strong>Lyndon Walters is <u>not</u> a Medical Doctor. <u>He does not offer, recommend nor does he give advice about Medical Matters. It must be further understood that Lyndon strongly insists that individuals seek Medical advice, intervention and treatment from a Medical Source only for all Medical conditions without exception</u></strong><u>.</u></p>
+<p>&nbsp;</p>
+
+              </div>
+              <p>&nbsp;</p>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <div class="clearfloat"></div>
+      <div class="push"></div>
+    </div>
+<div id="footer">
+  <div id="footercon">
+   	<div id="foottext">You are capable of experiencing not only achievement but fulfilment also.<br /><img src="img/footer-divider.gif" style="margin-top:10px;" alt=""  /><br />
+    Be inspired!</div>
+    
+    <div id="footnav"><a href="home.php">Home</a> |   <a href="what-i-provide.html">What I provide</a> |  <a href="philosophies.html">Philosophies</a> |  <a href="payment.html">Payment</a> |  <a href="research.html">Research</a> |  <a href="testimonials.html">Testimonials</a> |  <a href="membership.html">Membership</a> |  <a href="contact.html">Contact</a> 
+      <p style="margin-top:5px;">Copyright © 2012 Finding The Treasure In You.     All Rights Reserved. </p>
+
+<p style="margin-top:25px;">Share your discovery on: <span class='st_sharethis_hcount'></span>
+<span class='st_facebook_hcount' ></span>
+<span class='st_twitter_hcount' ></span>
+<span class='st_linkedin_hcount' ></span>
+<span class='st_email_hcount' ></span> </p> </div>
+    
+  </div>
+</div>
+</body>
+</html>
